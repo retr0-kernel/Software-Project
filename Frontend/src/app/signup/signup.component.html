@@ -1,0 +1,245 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Sign Up</h1>
+          <h6>Register in to the system</h6>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input
+              formControlName="first_name"
+              type="text"
+              class="form-control"
+              id="first_name"
+              placeholder="First Name"
+            />
+            <div
+              *ngIf="
+                signupForm.get('first_name')?.invalid &&
+                (signupForm.get('first_name')?.dirty ||
+                  signupForm.get('first_name')?.touched)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="signupForm.get('first_name')?.hasError('required')"
+              >
+                Name is required</small
+              >
+              <small
+                class="text-danger"
+                *ngIf="signupForm.get('first_name')?.hasError('pattern')"
+              >
+                Name can only have characters</small
+              >
+              <small
+                class="text-danger"
+                *ngIf="signupForm.get('first_name')?.hasError('maxlength')"
+              >
+                Maximum length is 25 characters</small
+              >
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="last_name" class="form-label">Last name</label>
+            <input
+              formControlName="last_name"
+              type="text"
+              class="form-control"
+              id="last_name"
+              placeholder="Last Name"
+            />
+            <div
+              *ngIf="
+                signupForm.get('last_name')?.invalid &&
+                (signupForm.get('last_name')?.dirty ||
+                  signupForm.get('last_name')?.touched)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="signupForm.get('last_name')?.hasError('required')"
+              >
+                Lastname is required</small
+              >
+              <small
+                class="text-danger"
+                *ngIf="signupForm.get('last_name')?.hasError('pattern')"
+              >
+                Lastname can only have characters</small
+              >
+              <small
+                class="text-danger"
+                *ngIf="signupForm.get('last_name')?.hasError('maxlength')"
+              >
+                Maximum length is 25 characters</small
+              >
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              formControlName="username"
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Username"
+            />
+            <div
+              *ngIf="
+                signupForm.get('username')?.invalid &&
+                (signupForm.get('username')?.dirty ||
+                  signupForm.get('username')?.touched)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="signupForm.get('username')?.hasError('required')"
+              >
+                Username is required</small
+              >
+              <small
+                class="text-danger"
+                *ngIf="signupForm.get('username')?.hasError('minlength')"
+              >
+                Minimum length is 5 characters</small
+              ><small
+                class="text-danger"
+                *ngIf="signupForm.get('username')?.hasError('maxlength')"
+              >
+                Maximum length is 35 characters</small
+              ><small
+                class="text-danger"
+                *ngIf="signupForm.get('username')?.hasError('pattern')"
+              >
+                Spaces are not allowed</small
+              >
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              formControlName="password"
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+            />
+            <div
+              *ngIf="
+                signupForm.get('password')?.invalid &&
+                (signupForm.get('password')?.dirty ||
+                  signupForm.get('password')?.touched)
+              "
+            >
+              <ul class="text-danger ps-3">
+                <li *ngIf="signupForm.get('password')?.hasError('required')">
+                  Password is required
+                </li>
+                <li *ngIf="signupForm.get('password')?.hasError('minlength')">
+                  Minimum length is 8 characters
+                </li>
+                <li *ngIf="signupForm.get('password')?.hasError('maxlength')">
+                  Maximum length is 23 characters
+                </li>
+                <li *ngIf="signupForm.get('password')?.hasError('pattern')">
+                  Password must contain at least one lowercase, one uppercase,
+                  one number, one special character and no space
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+              [disabled]="signupForm.invalid"
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- 2
+<div class="container-fluid h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-md-6">
+      <div class="card signup-card">
+        <div class="card-body">
+          <h2 class="text-center mb-4">Sign Up</h2>
+          <h6 class="text-center mb-4">Register in to the system</h6>
+          <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+            <div class="form-group mb-3">
+              <label for="first_name">First Name</label>
+              <input type="text" id="first_name" class="form-control" placeholder="First Name" formControlName="first_name">
+            </div>
+            <div class="form-group mb-3">
+              <label for="last_name">Last Name</label>
+              <input type="text" id="last_name" class="form-control" placeholder="Last Name" formControlName="last_name">
+            </div>
+            <div class="form-group mb-3">
+              <label for="username">Username</label>
+              <input type="text" id="username" class="form-control" placeholder="Username" formControlName="username">
+            </div>
+            <div class="form-group mb-3">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password">
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container-fluid h-100">
+  <div class="row no-gutters h-100">
+    <div class="col-md-5 signup-illustration">
+      <div class="logo-container my-3 text-center">
+        <img src="assets/logo.png" alt="" class="logo">
+      </div>
+    </div>
+    <div class="col-md-7 d-flex align-items-center justify-content-center">
+      <div class="signup-form">
+        <div class="signup-header mb-4">
+          <h2>Account Signup</h2>
+          <p>Become a member and enjoy exclusive promotions.</p>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="form-group mb-3">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" class="form-control" placeholder="First Name" formControlName="first_name">
+          </div>
+          <div class="form-group mb-3">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" class="form-control" placeholder="Last Name" formControlName="last_name">
+          </div>
+          <div class="form-group mb-3">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" placeholder="Username" formControlName="username">
+          </div>
+          <div class="form-group mb-3">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password">
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid">Continue</button>
+          </div>
+          <div class="text-center">
+            <p class="acc">Already have an account? <a href="/login">Log in here</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

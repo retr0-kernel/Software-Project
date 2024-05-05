@@ -1,0 +1,93 @@
+/* .card {
+  width: 50vh;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 20px 0px black;
+}
+.loginTitle {
+  padding: 30px;
+} */
+
+/* Overall background and full-height styling */
+.container-fluid.h-100 {
+  height: 100vh;
+  background-color: #2C73EB; /* Change this to the exact blue shade you need */
+}
+
+/* Logo styles */
+/* .logo-container .logo {
+  max-width: 150px; Adjust size accordingly
+} */
+
+/* Right column login form container */
+.login-form-container {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Login form specific styling */
+.login-form {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.login-form .login-header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.login-form .login-header p {
+  color: #666;
+}
+
+/* Input fields styling */
+.login-form .form-control {
+  border: 1px solid #ced4da;
+}
+
+.login-form .form-control:focus {
+  box-shadow: none;
+  border-color: #80bdff;
+}
+
+/* Checkbox label styling */
+.login-form .form-check-label {
+  color: #333;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #0069d9;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* .text-center{
+  border: 1px solid #025db8;  
+} */
+.acc{
+  color: #000000
+}
+/* Media query for responsive design */
+@media (max-width: 767px) {
+  .login-illustration, .login-form-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .login-illustration {
+    order: 2; /* Put the illustration at the bottom on small screens */
+  }
+  
+  .login-form-container {
+    order: 1; /* Put the form on top on small screens */
+  }
+}

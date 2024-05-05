@@ -1,0 +1,123 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center loginTitle">
+          <h1>Login</h1>
+          <h6>Please enter Username and Password</h6>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Username"
+              formControlName="username"
+            />
+            <div
+              *ngIf="
+                loginForm.get('username')?.invalid &&
+                (loginForm.get('username')?.dirty ||
+                  loginForm.get('username')?.touched)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="loginForm.get('username')?.hasError('required')"
+              >
+                Username is required</small
+              >
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              formControlName="password"
+            />
+            <div
+              *ngIf="
+                loginForm.get('password')?.invalid &&
+                (loginForm.get('password')?.dirty ||
+                  loginForm.get('password')?.touched)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="loginForm.get('password')?.hasError('required')"
+              >
+                Password is required</small
+              >
+            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+              [disabled]="loginForm.invalid"
+            >
+              Login
+            </button>
+            <span
+              >Need an account?
+              <a href="/signup">Register</a>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container-fluid h-100">
+  <div class="row no-gutters h-100">
+    <div class="col-md-6 login-illustration">
+      <!-- Placeholder for Logo and Illustration -->
+      <div class="logo-container my-3 text-center">
+        <img src="https://cdn.discordapp.com/attachments/919118836777766962/1234431263537106944/logo.png?ex=6630b533&is=662f63b3&hm=6cbbae9cd1e4bba9f0854254a955959416c91a036465f1e99ef82ec3f914c035&" alt="Logo" class="logo">
+      </div>
+    </div>
+    <div class="col-md-6 login-form-container d-flex align-items-center justify-content-center">
+      <!-- Login Form -->
+      <div class="login-form">
+        <div class="login-header mb-4">
+          <h1>Account Login</h1>
+          <p>If you are already a member you can login with your email address and password.</p>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <!-- Email Input -->
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="emailInput" placeholder="Email address" formControlName="username">
+          </div>
+          <!-- Password Input -->
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Password</label>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Password" formControlName="password">
+          </div>
+          <!-- Remember Me Checkbox -->
+          <div class="mb-4 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberCheck">
+            <label class="form-check-label" for="rememberCheck">Remember me</label>
+          </div>
+          <!-- Login Button -->
+          <div class="d-grid mb-2">
+            <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+          </div>
+          <!-- Register Link -->
+          <div class="text-center">
+            <p class="acc">Don't have an account? <a href="/signup">Sign up here</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
