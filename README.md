@@ -29,5 +29,5 @@ npm install
 
 4. Create the database and tables
 
-5. Now split terminal. One one terminal do `cd frontend` and other do `cd backend`. For running software we do `npm start` adn for running backend we do `node ./App.ja`.
+5. Now split terminal. One one terminal do `cd frontend` and other do `cd backend`. For running software we do `npm start` adn for running backend we do `node ./App.js`.
 
